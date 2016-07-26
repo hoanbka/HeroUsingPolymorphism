@@ -25,21 +25,23 @@ public class Archer extends Hero {
 	}
 
 	public void setAttack(Weapons weapons) {
+		this.weapons = weapons;
 		if (weapons == null) {
-			this.attack += level;
+			this.attack = level;
 		} else
 			this.attack = this.level + weapons.getLevel()
 					+ weapons.getBonusDexterity();
 	}
 
-
 	public void setDefense(Armors armors) {
+		this.armors = armors;
 		if (armors == null) {
-			this.armors = null;
-			this.defense += level;
+			this.defense = level;
 		} else
 			this.defense = this.level + armors.getLevel()
 					+ armors.getBonusDexterity();
 	}
+
+
 
 }
