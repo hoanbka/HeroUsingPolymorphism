@@ -25,20 +25,23 @@ public class Mage extends Hero {
 	}
 
 	public void setAttack(Weapons weapons) {
+		this.weapons = weapons;
 		if (weapons == null) {
-			this.attack += this.level;
+			this.attack = this.level;
 		} else
 			this.attack = this.level + weapons.getLevel()
 					+ weapons.getBonusIntelligence();
 	}
 
 	public void setDefense(Armors armors) {
+		this.armors = armors;
 		if (weapons == null) {
-			this.defense += this.level;
+			this.defense = this.level;
 		} else
 			this.defense = this.level + armors.getLevel()
 					+ armors.getBonusIntelligence();
 
 	}
+
 
 }
